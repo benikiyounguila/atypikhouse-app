@@ -1,0 +1,53 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Environnement
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Build React
+client/dist/
+client/dist-ssr/
+
+# Logs
+logs
+*.log
+*.log.*
+
+# Système
+.DS_Store
+Thumbs.db
+
+# Éditeurs/IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Tests
+/coverage
+
+# Fichiers temporaires
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# MongoDB
+data/
+*.dump
+
+# Vercel
+.vercel
+
+# Uploads
+api/uploads/

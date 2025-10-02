@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.cjs",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "client/dist/**",
+          "client/dist-ssr/**",
+          "api/config/**",
+          "api/models/**",
+          "api/routes/**",
+          "api/middlewares/**",
+          "api/services/**",
+          "api/utils/**",
+          "api/ssr/**"
+        ]
+      }
+    }
+  ],
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index.cjs" },
+    { "source": "/(.*)", "destination": "/api/index.cjs" }
+  ]
+}
