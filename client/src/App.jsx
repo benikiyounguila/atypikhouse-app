@@ -225,3 +225,4 @@ function App({ initialUser, initialPlaces, initialBookings, initialPerks, pagina
 }
 
 export default App;
+

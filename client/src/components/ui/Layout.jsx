@@ -6,6 +6,8 @@ const { Helmet } = HelmetModule;
 import { Header } from './Header';
 import Footer from './Footer';
 import Breadcrumb from './Breadcrumb';
+import CookieConsent from 'react-cookie-consent';
+import ClientOnly from '../utils/ClientOnly';
 
 const Layout = () => {
   const location = useLocation();
@@ -143,6 +145,24 @@ const Layout = () => {
       
 
       <Footer />
+      <ClientOnly>
+        <CookieConsent
+          location="bottom"
+          buttonText="J'accepte"
+          declineButtonText="Je refuse"
+          enableDeclineButton
+          cookieName="atypikhouseCookieConsent"
+          style={{ background: "#2B373B" }}
+          buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+          declineButtonStyle={{ margin: "10px 10px 10px 0" }}
+          expires={150}
+        >
+          Ce site utilise des cookies pour améliorer votre expérience.{" "}
+          <Link to="/parametres-cookies" style={{ textDecoration: 'underline', color: 'white' }}>
+            Personnaliser
+          </Link>
+        </CookieConsent>
+      </ClientOnly>
     </div>
   );
 };
